@@ -1,8 +1,4 @@
-getgenv().Config = {
-        Dashboard = {
-            Enabled = false, -- Connect to Adopt Me dashboard for remote monitoring/control
-            GroupName = "adoptme", -- Group name for organizing accounts on dashboard
-        },
+  getgenv().Config = {
         BabyFarm = true, -- Does baby farm
         PetFarm = {
             Enabled = true, -- Enables the Pet Farm
@@ -14,27 +10,7 @@ getgenv().Config = {
             FarmUntilFullGrown = false, -- If true, selects pets that aren't full grown first
             PrioritizeFriendship = true, -- If true, selects pets with higher friendship level first
             SelectiveFarm = false, -- If true, only farm pets in SelectedPetTypes list
-            SelectedPetTypes = {}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
-        },
-        EventFarm = {
-            AutoExchange = {
-                Enabled = true, -- Exchange bucks for event currency
-            },
-            AutoSleighball = false, -- Automatically play sleighball minigame (does not work with baby or pet farm)
-            AutoHumbug = false, -- Automatically play humbug minigame (does not work with baby or pet farm)
-            AutoStarCatch = false, -- Automatically play star catch minigame (does not work with baby or pet farm)
-        },
-        AutoTrade = {
-            Enabled = false, -- Enable auto trading
-            AutoAcceptTrades = false, -- Accept incoming trade requests
-            Usernames = {}, -- Players to send trades to
-            TradeMode = "all", -- "all" = everything in categories, "specific" = only Items list
-            Categories = {}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
-            Items = {}, -- Item IDs when TradeMode = "specific"
-            ItemCounts = {}, -- Max count per item in Items array
-            PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
-            Ages = {}, -- {} = all, {1, 2, 3, 4, 5, 6}
-            AutoLeaveAfterTrades = false, -- Leave trade area after completing trades
+            SelectedPetTypes = {"dog", "cat"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
         },
         AutoNeon = {
             Enabled = true, -- Enable auto neon/mega fusion
@@ -44,33 +20,29 @@ getgenv().Config = {
             MaxPerType = {}, -- {} = unlimited, {dog = 2, cat = 1} = limits per pet type
         },
         Settings = {
-            AutoShowUI = false, -- Load the UI on script start (main overlay disable for less memory usage)
             ShowOverlay = true, -- Show stats overlay (disables 3D rendering)
             ReduceGraphics = true, -- Reduce graphics quality to minimum
-            FPSCap = 2, -- FPS cap option (0 = uncapped)
-        },
-        AutoPotion = {
-            Enabled = true, -- Use age potions on pets to level them up
-            SelectedPets = {"winter_2025_xmas_tree_sasquatch", "winter_2025_christmas_spirit", "halloween_2025_slimingo", "winter_2025_mrs_whiskerpips", "winter_2025_old_king_coal", "winter_2025_snowball_pug"}, -- Pet IDs to use potions on (empty = does nothing)
+            FPSCap = 3, -- FPS cap option (0 = uncapped)
         },
         AutoBuy = {
-            Enabled = true, -- Automatically buy items from shops
+            Enabled = false, -- Automatically buy items from shops
             SelectedItems = {"winter_2025_christmas_spirit"}, -- Item IDs to buy
-        },
-        AutoPay = {
-            Enabled = false, -- Send bucks to another player
-            TargetPlayer = "", -- Username of player to pay bucks to
+            BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
         },
         AutoOpen = {
-            Enabled = false, -- Open gift boxes, baits, etc automatically
-            Items = {}, -- Item IDs to auto open
+            Enabled = false, -- Open gift boxes automatically
+            Items = {}, -- Item IDs to auto open (e.g., {"winter_2025_angus_box"})
+        },
+        AutoPotion = {
+            Enabled = false, -- Use age potions on pets to level them up
+            SelectedPets = {}, -- Pet IDs to use potions on (empty = does nothing)
         },
         AutoRecycle = {
             Enabled = false, -- Recycle pets at recycler for rewards
             RarityFilter = {common = true, uncommon = true, rare = false, ultra_rare = false, legendary = false}, -- Which rarities to recycle (true = recycle, false = keep)
-            KeepNeons = true, -- If true, don't recycle neon or mega neon pets
-            KeepFullGrown = false, -- If true, don't recycle full grown pets
-            ExcludedPets = {}, -- Pet IDs to never recycle even if rarity matches
+            AgeFilter = {}, -- empty = all ages, or {1,2,3,4,5,6}
+            VersionFilter = {}, -- empty = all, or {"regular", "neon", "mega"}
+            ExcludedPets = {}, -- Pet IDs to never recycle even if rarity matches {"dog", "cat"}
         },
         IdleProgression = {
             Enabled = true, -- Put pets in pet pen for idle leveling
@@ -92,4 +64,4 @@ getgenv().Config = {
         },
     };
 script_key="hVcQfYscLTzomvugcRUlrLwkxiZBqiCo"
-loadstring(game:HttpGet("https://zekehub.com/scripts/AdoptMe/MassFarm.lua"))()
+loadstring(game:HttpGet("https://zekehub.com/scripts/AdoptMe/Lite.lua"))()
