@@ -63,5 +63,5 @@
             ExcludedTasks = {}, -- Task IDs to skip (e.g., {"buccaneer_band", "summerfest_bonfire"})
         },
     };
-script_key="QDrjYXhAFrgXHwlkSReFRApmpOOjsJvK"
+script_key="NbMPUGTzgrFlYgMsArDNvGYSURvUvTJG"
 loadstring(game:HttpGet("https://zekehub.com/scripts/AdoptMe/Lite.lua"))()
