@@ -34,8 +34,8 @@
             Items = {}, -- Item IDs to auto open (e.g., {"winter_2025_angus_box"})
         },
         AutoPotion = {
-            Enabled = false, -- Use age potions on pets to level them up
-            SelectedPets = {}, -- Pet IDs to use potions on (empty = does nothing)
+            Enabled = true, -- Use age potions on pets to level them up
+            SelectedPets = {"winter_2025_xmas_tree_sasquatch", "winter_2025_christmas_spirit", "halloween_2025_slimingo", "winter_2025_mrs_whiskerpips", "winter_2025_old_king_coal", "winter_2025_snowball_pug"}, -- Pet IDs to use potions on (empty = does nothing)
         },
         AutoRecycle = {
             Enabled = false, -- Recycle pets at recycler for rewards
