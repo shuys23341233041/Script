@@ -23,10 +23,11 @@
             ShowOverlay = true, -- Show stats overlay (disables 3D rendering)
             ReduceGraphics = true, -- Reduce graphics quality to minimum
             FPSCap = 3, -- FPS cap option (0 = uncapped)
+            LureId = "ice_dimension_2025_ice_soup_bait", -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
         },
         AutoBuy = {
             Enabled = false, -- Automatically buy items from shops
-            SelectedItems = {"winter_2025_christmas_spirit"}, -- Item IDs to buy
+            SelectedItems = {"gifts|winter_2025_angus_box"}, -- Item IDs to buy
             BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
         },
         AutoOpen = {
@@ -34,8 +35,8 @@
             Items = {}, -- Item IDs to auto open (e.g., {"winter_2025_angus_box"})
         },
         AutoPotion = {
-            Enabled = true, -- Use age potions on pets to level them up
-            SelectedPets = {"winter_2025_xmas_tree_sasquatch", "winter_2025_christmas_spirit", "halloween_2025_slimingo", "winter_2025_mrs_whiskerpips", "winter_2025_old_king_coal", "winter_2025_snowball_pug"}, -- Pet IDs to use potions on (empty = does nothing)
+            Enabled = false, -- Use age potions on pets to level them up
+            SelectedPets = {}, -- Pet IDs to use potions on (empty = does nothing)
         },
         AutoRecycle = {
             Enabled = false, -- Recycle pets at recycler for rewards
@@ -46,7 +47,7 @@
         },
         IdleProgression = {
             Enabled = true, -- Put pets in pet pen for idle leveling
-            SelectedPets = {"winter_2025_xmas_tree_sasquatch", "winter_2025_christmas_spirit", "halloween_2025_slimingo", "winter_2025_mrs_whiskerpips", "winter_2025_old_king_coal", "winter_2025_snowball_pug"}, -- Pet IDs to put in pet pen (empty = use all)
+            SelectedPets = {"cracked_egg"}, -- Pet IDs to put in pet pen (empty = use all)
             ExcludedPets = {}, -- Pet IDs to never put in pet pen
         },
         Webhook = {
@@ -63,5 +64,5 @@
             ExcludedTasks = {}, -- Task IDs to skip (e.g., {"buccaneer_band", "summerfest_bonfire"})
         },
     };
-script_key="NbMPUGTzgrFlYgMsArDNvGYSURvUvTJG"
+getgenv().scriptkey="NbMPUGTzgrFlYgMsArDNvGYSURvUvTJG"
 loadstring(game:HttpGet("https://zekehub.com/scripts/AdoptMe/Lite.lua"))()
