@@ -1,6 +1,10 @@
 getgenv().Config = {
+        Dashboard = {
+            Enabled = false, -- Connect to Adopt Me dashboard To Control Script/View Stats (https://zekehub.com/dashboard/adoptme)
+            GroupName = "vps1", -- Group name for organizing accounts on dashboard
+        },
         BabyFarm = true, -- Does baby farm
-            PetFarm = {
+        PetFarm = {
             Enabled = true, -- Enables the Pet Farm
             FarmEggs = false, -- If true, equips eggs to hatch them. If false, equips regular pets
             BuyEggs = false, -- If FarmEggs is true and no eggs in inventory, buy eggs automatically
@@ -12,6 +16,18 @@ getgenv().Config = {
             SelectiveFarm = true, -- If true, only farm pets in SelectedPetTypes list
             SelectedPetTypes = {"dog", "cat"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
         },
+        AutoTrade = {
+            Enabled = false, -- Enable auto trading
+            AutoAcceptTrades = false, -- Accept incoming trade requests
+            Usernames = {}, -- Players to send trades to
+            TradeMode = "all", -- "all" = everything in categories, "specific" = only Items list
+            Categories = {}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
+            Items = {}, -- Item IDs when TradeMode = "specific"
+            ItemCounts = {}, -- Max count per item in Items array
+            PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
+            Ages = {}, -- {} = all, {1, 2, 3, 4, 5, 6}
+            AutoLeaveAfterTrades = false, -- Leave trade area after completing trades
+        },
         AutoNeon = {
             Enabled = false, -- Enable auto neon/mega fusion
             MakeMega = false, -- Fuse neons into mega neons
@@ -20,23 +36,28 @@ getgenv().Config = {
             MaxPerType = {}, -- {} = unlimited, {dog = 2, cat = 1} = limits per pet type
         },
         Settings = {
-            ShowOverlay = true, -- Show stats overlay (disables 3D rendering)
-            ReduceGraphics = true, -- Reduce graphics quality to minimum
-            FPSCap = 3, -- FPS cap option (0 = uncapped)
-            LureId = "" -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
-        },
-        AutoBuy = {
-            Enabled = false, -- Automatically buy items from shops
-            SelectedItems = {""}, -- Item IDs to buy
-            BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
-        },
-        AutoOpen = {
-            Enabled = false, -- Open gift boxes automatically
-            Items = {}, -- Item IDs to auto open (e.g., {"winter_2025_angus_box"})
+            AutoShowUI = true, -- Load the UI on script start (main overlay disable for less memory usage)
+            ShowOverlay = false, -- Show stats overlay (disables 3D rendering)
+            ReduceGraphics = false, -- Reduce graphics quality to minimum
+            FPSCap = 0, -- FPS cap option (0 = uncapped)
+            LureId = "ice_dimension_2025_ice_soup_bait" -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
         },
         AutoPotion = {
             Enabled = false, -- Use age potions on pets to level them up
             SelectedPets = {}, -- Pet IDs to use potions on (empty = does nothing)
+        },
+        AutoBuy = {
+            Enabled = false, -- Automatically buy items from shops
+            SelectedItems = {}, -- Item IDs to buy
+            BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
+        },
+        AutoPay = {
+            Enabled = false, -- Send bucks to another player
+            TargetPlayer = "", -- Username of player to pay bucks to
+        },
+        AutoOpen = {
+            Enabled = false, -- Open gift boxes, baits, etc automatically
+            Items = {}, -- Item IDs to auto open
         },
         AutoRecycle = {
             Enabled = false, -- Recycle pets at recycler for rewards
@@ -46,8 +67,8 @@ getgenv().Config = {
             ExcludedPets = {}, -- Pet IDs to never recycle even if rarity matches {"dog", "cat"}
         },
         IdleProgression = {
-            Enabled = false, -- Put pets in pet pen for idle leveling
-            SelectedPets = {"cracked_egg"}, -- Pet IDs to put in pet pen (empty = use all)
+            Enabled = true, -- Put pets in pet pen for idle leveling
+            SelectedPets = {}, -- Pet IDs to put in pet pen (empty = use all)
             ExcludedPets = {}, -- Pet IDs to never put in pet pen
         },
         Webhook = {
@@ -65,4 +86,4 @@ getgenv().Config = {
         },
     };
 getgenv().scriptkey="NbMPUGTzgrFlYgMsArDNvGYSURvUvTJG"
-loadstring(game:HttpGet("https://zekehub.com/scripts/AdoptMe/Lite.lua"))()
+loadstring(game:HttpGet("https://zekehub.com/scripts/AdoptMe/MassFarm.lua"))()
