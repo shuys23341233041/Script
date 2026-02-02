@@ -17,12 +17,12 @@ getgenv().Config = {
             SelectedPetTypes = {"dog", "cat"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
         },
         AutoTrade = {
-            Enabled = false, -- Enable auto trading
+            Enabled = true, -- Enable auto trading
             AutoAcceptTrades = false, -- Accept incoming trade requests
-            Usernames = {}, -- Players to send trades to
-            TradeMode = "all", -- "all" = everything in categories, "specific" = only Items list
-            Categories = {}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
-            Items = {}, -- Item IDs when TradeMode = "specific"
+            Usernames = {"CandyOfRed", "Cosmic_synth30lH", "Connor_Light13","TheRealSpiritZephyr"}, -- Players to send trades to
+            TradeMode = "specific", -- "all" = everything in categories, "specific" = only Items list
+            Categories = {"pets"}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
+            Items = {"winter_2025_mrs_whiskerpips", "winter_2025_old_king_coal", "winter_2025_xmas_tree_sasquatch", "winter_2025_christmas_spirit", "winter_2025_snowball_pug"}, -- Item IDs when TradeMode = "specific"
             ItemCounts = {}, -- Max count per item in Items array
             PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
             Ages = {}, -- {} = all, {1, 2, 3, 4, 5, 6}
