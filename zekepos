@@ -1,6 +1,6 @@
 getgenv().Config = {
         Dashboard = {
-            Enabled = false, -- Connect to Adopt Me dashboard To Control Script/View Stats (https://zekehub.com/dashboard/adoptme)
+            Enabled = true, -- Connect to Adopt Me dashboard To Control Script/View Stats (https://zekehub.com/dashboard/adoptme)
             GroupName = "adoptme", -- Group name for organizing accounts on dashboard
         },
         BabyFarm = true, -- Does baby farm
@@ -17,12 +17,12 @@ getgenv().Config = {
             SelectedPetTypes = {}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
         },
         AutoTrade = {
-            Enabled = true, -- Enable auto trading
+            Enabled = false, -- Enable auto trading
             AutoAcceptTrades = false, -- Accept incoming trade requests
-            Usernames = {"Cosmic_synth30lH", "CandyOfRed", "Connor_Light13", "TheRealSpiritZephyr"}, -- Players to send trades to
-            TradeMode = "specific", -- "all" = everything in categories, "specific" = only Items list
-            Categories = {"pets"}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
-            Items = {"pet_recycler_2025_giant_panda", "penguins_2025_dango_penguins", "food_pets_2026_dragonfruit_fox", "winter_2025_christmas_spirit", "ice_dimension_2025_frostbite_bear"}, -- Item IDs when TradeMode = "specific"
+            Usernames = {}, -- Players to send trades to
+            TradeMode = "all", -- "all" = everything in categories, "specific" = only Items list
+            Categories = {}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
+            Items = {}, -- Item IDs when TradeMode = "specific"
             ItemCounts = {}, -- Max count per item in Items array
             PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
             Ages = {}, -- {} = all, {1, 2, 3, 4, 5, 6}
@@ -43,8 +43,8 @@ getgenv().Config = {
             LureId = "ice_dimension_2025_ice_soup_bait" -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
         },
         AutoPotion = {
-            Enabled = true, -- Use age potions on pets to level them up
-            SelectedPets = {"pet_recycler_2025_giant_panda", "penguins_2025_dango_penguins", "food_pets_2026_dragonfruit_fox"}, -- Pet IDs to use potions on (empty = does nothing)
+            Enabled = false, -- Use age potions on pets to level them up
+            SelectedPets = {}, -- Pet IDs to use potions on (empty = does nothing)
         },
         AutoBuy = {
             Enabled = false, -- Automatically buy items from shops
