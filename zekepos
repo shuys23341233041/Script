@@ -22,7 +22,7 @@
             Usernames = {"Cosmic_synth30lH", "Connor_Light13", "TheRealSpiritZephyr", "CandyOfRed"}, -- Players to send trades to
             TradeMode = "specific", -- "all" = everything in categories, "specific" = only Items list
             Categories = {"pets"}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
-            Items = {"pet_recycler_2025_giant_panda", "penguins_2025_dango_penguins", "food_pets_2026_dragonfruit_fox", "winter_2025_christmas_spirit", "ice_dimension_2025_frostbite_bear","endangered_2026_silverback_gorilla"}, -- Item IDs when TradeMode = "specific"
+            Items = {"pet_recycler_2025_giant_panda", "penguins_2025_dango_penguins", "food_pets_2026_dragonfruit_fox", "winter_2025_christmas_spirit", "ice_dimension_2025_frostbite_bear", "endangered_2026_silverback_gorilla"}, -- Item IDs when TradeMode = "specific"
             ItemCounts = {}, -- Max count per item in Items array
             PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
             Ages = {}, -- {} = all, {1, 2, 3, 4, 5, 6}
@@ -74,7 +74,7 @@
                 legendary = {"regular", "neon", "mega"},                 -- Only recycle mega legendaries
             },
             AgeFilter = {}, -- Empty = all ages, or specific ages e.g. {1, 2, 3, 4, 5, 6} (1=Newborn, 6=Full Grown)
-            ExcludedPets = {"pet_recycler_2025_giant_panda", "penguins_2025_dango_penguins", "food_pets_2026_dragonfruit_fox", "winter_2025_christmas_spirit", "ice_dimension_2025_frostbite_bear","endangered_2026_silverback_gorilla"}, -- Pet IDs to never recycle e.g. {"dog", "cat", "shadow_dragon"}
+            ExcludedPets = {"pet_recycler_2025_giant_panda", "penguins_2025_dango_penguins", "food_pets_2026_dragonfruit_fox", "winter_2025_christmas_spirit", "ice_dimension_2025_frostbite_bear", "endangered_2026_silverback_gorilla"}, -- Pet IDs to never recycle e.g. {"dog", "cat", "shadow_dragon"}
         },
         IdleProgression = {
             Enabled = true, -- Put pets in pet pen for idle leveling
