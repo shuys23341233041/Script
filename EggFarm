@@ -70,7 +70,7 @@ getgenv().Config = {
             Enabled = true, -- Put pets in pet pen for idle leveling
             SelectedPets = {"pet_recycler_2025_crystal_egg", "admin_abuse_egg_2026_egg"}, -- Pet IDs to put in pet pen (empty = use all)
             ExcludedPets = {}, -- Pet IDs to never put in pet pen
-            PriorityOrder = {"regular"}, -- Order: first = highest priority for pen slots (e.g. {"neon", "regular", "mega"})
+            PriorityOrder = {"regular", "mega", "neon"}, -- Order: first = highest priority for pen slots (e.g. {"neon", "regular", "mega"})
         },
         AccountManager = {
             Enabled = false, -- Master toggle for account management
